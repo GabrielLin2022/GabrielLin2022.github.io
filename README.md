@@ -1,1 +1,0 @@
-# GabrielLin2022.github.io
