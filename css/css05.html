@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <mata name="viewport" content="width-device-width, initial-scale=1.0">
+
+    <title>background position calc</title>
+    <style>
+
+       /*子選擇器*/
+       article > p{color:blue;}
+       .mary > p{color:blueviolet;}
+       #wa >p{color: aqua;}
+       
+       
+
+
+    </style>
+</head>
+<body>
+        <article>
+                <p>ppppppp</p>
+        </article>
+        <p>AAAAAAAA</p>
+        <div class="mary">
+                <p>Mary</p>
+        </div>
+        <!--如果在p前面加一個span就不會是它的子選擇器，拿掉span就會正常-->
+        <div id="wa">
+                <p>Mary</p>
+        </div>
+</div>
+</body>
+</html>

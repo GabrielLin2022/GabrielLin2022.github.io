@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <mata name="viewport" content="width-device-width, initial-scale=1.0">
+
+    <title>background position calc</title>
+    <style>
+
+       /*同層相鄰(旁邊)選擇器，用加號，p跟h1相加*/
+       h1 {color:red;}
+       h1 + p {color:green;}
+       
+       
+
+
+    </style>
+</head>
+<body>
+       <h1>標題1會套用紅色</h1>
+       <!--第一個p在h1旁邊，所以它為綠色-->
+       <p>跟h1相鄰的p會套用綠色</p>
+       <!--第二個p沒有在h1旁邊，所以它為黑色-->
+       <p>沒有跟h1相鄰的p會套用預設值</p>
+    
+</body>
+</html>
