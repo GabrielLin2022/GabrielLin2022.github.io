@@ -1,9 +1,10 @@
 <script>
     //switch...case判斷式 多重選擇
-    var day;
+    //透過new Date()這個類別底下的getDay()的方法，取得今天的日期(系統裡的日期)
+    var day; //宣告一個變數叫day
          var a = new Date().getDay();
          switch (new Date().getDay()) {
-         case 0://比對子不可以重複
+         case 0://case的比對子不可以重複
             day = "星期日";
             break;
          case 1:
@@ -24,7 +25,7 @@
          case 6:
             day = "星期六";
          }
-         console.log("今天是 " + day)
+         console.log("今天是 " + day) //console.log() 是將字串和變數印出來，+(加號)是連接運算子，也就('字串' + 變數)
          console.log("a: " + a)
 
 </script>

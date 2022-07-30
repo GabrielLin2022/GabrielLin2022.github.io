@@ -1,9 +1,17 @@
 <script>
+    //iterator專門迭代集合，使用頻率很高
+    //集合，我想要容器裡有數字、字串
+    //陣列，只能擺放相同資料型態的資料
+    //第二種陣列宣告方式[], list[]就陣列
     var arr = [1,2,3];
-    var iter = arr[Symbol.iterator]();//Symbol.iterator屬性的值為一個符合迭代器協議的函式
+    //arr我想用Symbol.iterator屬性去迭代，再將它設定(指派)給iter
+    var iter = arr[Symbol.iterator]();
+    //Symbol.iterator屬性的值為一個符合迭代器協議的函式
+    //Symbol.iterator屬性就可以不用跑for迴圈
+    //arr[Symbol.iterator]()，它的括號()函式在外面，特別注意寫法
     console.log(iter)
-    console.log(iter.next())
-    console.log(iter.next())
+    console.log(iter.next())//iter.next()自動下一步很像for迴圈裡的 i++，印出來的資料和for迴圈沒有一樣
+    console.log(iter.next())//iterator會取兩個值，value和done
     console.log(iter.next())
     console.log(iter.next())
 
