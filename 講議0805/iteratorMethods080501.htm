@@ -1,0 +1,70 @@
+<meta charset="UTF-8" />
+<script>
+    //entries() 方法返回一個新的array Iterator對象，該對象包含數組中每個索引的鍵/值對
+    array1=[10, 20, 30, 40, 50];
+    console.log("原始陣列", array1)
+    //entries()
+    var iterator1 = array1.entries(); 
+    console.log( iterator1.next().value ); //array [0, 10]
+
+    //values()
+    var iterator1 = array1.values();
+    console.log( iterator1.next().value ); // 10
+
+    //filter()過濾
+    var filtered = array1.filter(value => value >25); //值超過25以上的把它輸出出來
+    console.log( filtered ) //[30, 40, 50]
+
+    /*箭頭函式
+基本語法
+(參數1, 參數2, …, 參數N) => { 陳述式; }
+
+(參數1, 參數2, …, 參數N) => 表示式;
+// 等相同(參數1, 參數2, …, 參數N) => { return 表示式; }
+
+// 只有一個參數時,括號才能不加:
+(單一參數) => { 陳述式; }
+單一參數 => { 陳述式; }
+
+//若無參數，就一定要加括號:
+() => { statements }
+*/
+    function greeting(){    //function 是定義的意思，如python的def一樣
+        console.log("Hello");
+    }
+    greeting();
+
+    //改成箭頭的寫法，改版成ES6後，新的寫法，沒有比較好用
+    var greeting = () => {
+        console.log("Hello2");
+    }
+    greeting();
+
+    //改成箭頭的寫法，改版成ES6後，新的寫法，沒有比較好用
+    var greeting = () =>"Welcome"
+    console.log(greeting());
+    
+
+    //return其實等於這個寫法，這是原有的寫法，比較容易理解
+    var greetin = function(){
+        return "Welcome"
+    }
+    
+
+
+
+    var arr = ["a","b","c"];
+    var iter = arr.entries();
+    var a = [];
+
+    //for(var i=0; i< arr.length; i++){} //實際使用的是這個
+    for(var i=0; i< arr.length+1; i++){  //注意，是length+1, 比數組的長度大
+        var tem = iter.next();           //每次迭代時更新next
+        console.log(tem.done);           //這裡可以看到更新後的done都是false，表示下面還有東西要跑，它會顯示出false，就繼續往下跑
+        if(tem.done !== true){           //遍歷迭代器結束done才是true
+            console.log(tem.value);
+            a[i]=tem.value;
+        }
+    }
+    
+</script>

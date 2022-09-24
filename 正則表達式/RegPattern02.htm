@@ -1,41 +1,27 @@
 <meta charset="UTF-8" />
 <script>
-    var target = "18, 2150, 310, Sunday, Monday, Tuesday"
+var target = "18, 2150, 310, Sunday, Monday, Tuesday"
 
-    var reg1 = /[f-m]/gi;    //比對f、g、h、i、j、k、l、m字母
-    var reg2 = /Sunday,+/g;  //比對Sunday後面有一個以上的逗號(,)
-    var reg3 = /\d{3,4}/g;   //比對有3~4位的數字
-    var reg4 = /^18/gi;      //開頭符合18
-    var reg5 = /day$/g;      //結尾符合day
-    var reg6 = /Tuesday$/gi; //比對符合3~4位數字
-    var reg7 = /310$/;       //比對符合3~4位數字
-    var reg8 = /310$/m;      //比對符合3~4位數字 m 比對換行符號
+var reg1 = /[f-m]/gi;      //比對f、g、h、i、j、k、l、m字母
+var reg2 = /Sunday,+/g;     //比對Sunday後面有一個以上的逗號(,)
+var reg3=/\d{3,4}/g;        //比對有3~4位的數字
 
-    console.log(target.match(reg1));
-    console.log(target.match(reg2));
-    console.log(target.match(reg3));
-    console.log(target.match(reg4));
-    console.log(target.match(reg5));
-    console.log(target.match(reg6)); 
-    console.log(target.match(reg7));
-    console.log(target.match(reg8));
+console.log(target.match(reg1));
+console.log(target.match(reg2));
+console.log(target.match(reg3));
 
-    /*
-    g : 全域比對 (Global match
-    i : 忽略大小寫 (Ignore case)
-    gi : 全域比對並忽略大小寫
-    */
-
-    var target = "There's a hero.If you look inside your heart.You don't have to be afraid of what you are.There's an answer If you reach into your soul And the sorrow that you know will melt away."
-    
-    //you 出現幾次
-    console.group("查詢某字出現次數")
-    reg = /you\b/gi; // \b 一個單字範圍
-    var result = target.match(reg);
-    console.log(result);
-    console.log("you 出現", result.length,"次");
-    console.groupEnd("查詢某字出現次數")
+var target = "There's a hero.If you look inside your heart.You don't have to be afraid of what you are.There's an answer If you reach into your soul And the sorrow that you know will melt away."
 
 //you出現幾次
-
+console.group("查詢某字出現次數")
+reg = /you\b/gi;//\b 一個單字範圍   
+var result=target.match(reg);
+console.log( result );
+console.log("you 出現", result.length ,"次");
+console.groupEnd("查詢某字出現次數")
+/*
+g：全域比對（Global match）
+i：忽略大小寫（Ignore case）
+gi：全域比對並忽略大小寫
+*/
 </script>
